@@ -1,0 +1,62 @@
+{% render 'partials/head.liquid' %}
+
+<header class="mobileHeader">
+  <h1>home</h1>
+</header>
+
+
+
+<main>
+
+  <a href="/suggesties" class="suggesties knop"></a>
+
+
+  <h2>Welkom Gebruiker</h2>
+  <section>
+  <h3>Bloemenveld collectie</h3>
+
+  <section class="collectionInfoHome">
+    <article>
+      <p>
+        je hebt nog niks gespaard start de veldverkenner om meer te weten te komen over wat er groeit en je collectie
+        aan te vullen
+      </p>
+    </article>
+  </section>
+  </section>
+
+<section>
+  <h3>Veld Nieuws</h3>
+<section class="collectionArticles-home">
+<section class="articlePreview-home">
+{% for news in news limit:3 %}
+
+    <article class="articlePreview-home">
+    <span class="tag">Bloemenveld</span>
+    <h4>
+        {{ news.title | truncate: 27}}
+    </h4>
+      <img src="https://fdnd-agency.directus.app/assets/{{ news.image }}" height="" alt="placeholder plant">
+      <p>{{ news.body | truncate: 30}}</p>
+    </article>
+  
+{% endfor %}
+</section>
+</section>
+</section>
+
+
+</main>
+
+<section class="nav">
+  <ul class="nav">
+    <li class="nav"><a href="/">home</li>
+    <li class="nav"><a href="/veldverkenner">veldverkenner</a></li>
+    <li class="nav"><a href="/nieuws">nieuws</a></li>
+    <li class="nav"><a href="/collectie">collectie</a></li>
+  </ul>
+</section>
+
+
+
+{% render 'partials/foot.liquid' %}

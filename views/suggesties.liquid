@@ -1,0 +1,47 @@
+{% render 'partials/head.liquid' %}
+
+<header class="mobileHeader">
+  <h1>Suggesties</h1>
+</header>
+
+<main>
+<a href="/" class="terug knop"></a>
+{% comment %} <a href="/" class="terug knop"></a>
+
+<section class="suggestie">
+<h3>
+    suggestie 1
+</h3>
+
+<article class="votes">
+<p>⬇️</p>
+
+<p>⬆️</p>
+</article> {% endcomment %}
+
+
+    {% for suggestion in suggestions %}
+      
+      <article class="suggestie">
+        {% comment %} de eerste sugg is alle data uit de datbase, de tweede sugg is de variabele uit de database in het id {% endcomment %}
+        <h4>{{ suggestion.suggestion }}</h4>
+
+<article class="votes">
+<p>⬇️</p>
+
+<p>⬆️</p>
+</article>
+
+      </article>
+      
+    {% endfor %}
+
+</section>
+
+
+<a href="/jouw-suggestie" class="toevoegen knop"></a>
+
+</main>
+
+
+{% render 'partials/foot.liquid' %}

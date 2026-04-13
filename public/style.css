@@ -1,0 +1,292 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    margin-top: 1em;
+    margin-bottom: 7em;
+    height: fit-content;
+
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+/* darkmode */@media screen and (prefers-color-scheme: dark){ 
+    body { 
+        background-color: black; 
+        color: white;
+    }
+
+    article.articlePreview-home {
+        h4{
+        color: black;
+        }
+    }
+
+    section.collectionInfoHome {
+        color: black;
+    }
+
+    h4 {
+        color: white;
+    }
+
+    article.suggestie {
+        h4 {
+            color: black;
+        }
+    }
+ }
+
+/* eind darkmode */
+
+
+li {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    height: 100px;
+    width: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+.mobileHeader {
+    place-content: start space-evenly;
+}
+
+section {
+    p {
+        width: 30ch;
+    }
+}
+
+/* de filter in de header */
+.filterButton {
+    padding: 0.3em;
+    background: var(--background-color-2);
+    border-radius: 0.3em;
+}
+
+.filterHeader {
+    width: 100vw;
+    height: fit-content;
+    top: 100px;
+    gap: 1em;
+    top: 4em;
+    place-content: center;
+    position: absolute;
+    display: flex;
+}
+
+/* einde filterheader */
+
+
+/* KNOPCLASSES */
+/* statische knop op zelfde plek altijd. nog stijlen */
+.knop {
+    height: 3em;
+    width: 3em;
+    background: green;
+    position: absolute;
+}
+
+/* knop naar de suggestions page */
+.suggesties {
+    right: 1em;
+    top: 1em;
+}
+
+.terug {
+    left: 1em;
+    top: 1em;
+}
+
+.toevoegen {
+    right: 1em;
+    bottom: 1em;
+}
+/* ///////// */
+
+
+/* footer met nav */
+section.nav {
+    position: fixed;
+    bottom: 0;
+    place-content: center;
+    width: 100vw;
+    height: 100px;
+    background: var(--background-color-2);
+
+    @media (min-width: 800px) {
+        /* top: 0; */
+    }
+}
+
+ul.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+}
+
+
+li.nav {
+    font-size: var(--font-size-s);
+    font-weight: 600;
+}
+
+/* einde headernav */
+
+/* bloemenveld collectie gedeelte */
+section.collectionInfoHome {
+    background: var(--background-color-4);
+    margin: 1em;
+    padding: 1em;
+    border-radius: var(--border-radius-1);
+}
+
+/* ////////////////////// */
+
+/* tag van de article preview */
+.tag {
+    align-self: flex-start;
+    font-size: var(--font-size-xxs);
+    background: var(--background-color-5);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+
+/* basis stijling van de article previews */
+.articleList {
+    display: flex;
+    flex-direction: column;
+}
+
+.collectionArticles-home {
+    padding: 1em 0 1em 1em;
+}
+
+/* nesting is widely available */
+article.articlePreview-home {
+    background: var(--background-color-2);
+    color: var(--text-color-2);
+    padding: 1em;
+    border-radius: 1em;
+    width: 250px;
+
+    h4 {
+        padding-bottom: 1em;
+        font-size: var(--font-size-s);
+        text-wrap: nowrap;
+    }
+
+    img {
+        width: 250px;
+        height: 180px;
+        object-fit: cover;
+    }
+}
+
+/* preview van artikel op de homepagina */
+section.articlePreview-home {
+    display: flex;
+    gap: 1em;
+    overflow-x: scroll;
+}
+
+/* preview van artikel op de nieuwspagina */
+article.articlePreview-nieuws {
+    display: flex;
+    background: transparent;
+    border-top: solid;
+    border-radius: 0;
+    padding: 1em;
+    gap: 1em;
+
+    h4 {
+        padding-bottom: 0;
+        font-size: var(--font-size-s);
+    }
+
+    img {
+        object-fit: cover;
+        height: 50px;
+        place-self: center;
+    }
+}
+
+
+
+/* detailpagina nieuwsbericht */
+article.artikel {
+    border-radius: var(--border-radius-1);
+    padding: 1em;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: var(--font-size-l);
+        padding-bottom: 0.5em;
+    }
+ 
+    p {
+        font-size: var(--font-size-s);
+    }
+}
+
+.error-img {
+    width: 80vw;
+    justify-self: center;
+}
+
+
+.suggestie {
+    display: flex;
+    flex-direction: row;
+
+
+    padding: 1em;
+    border-radius: 1em;
+    margin: 1em;
+
+    background: var(--background-color-2);
+
+    .votes {
+        width: 1em;
+    }
+}
+
+/* sectionclass van de jouw-suggestie page */
+form.form {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-self: center;
+    gap: 0.5em;
+
+    input {
+        width: 250px;
+        padding: 0.5em;
+        border: solid black;
+        border-radius: 5em;
+        border-style: default;
+        align-self: center;
+    }
+
+    label {
+        align-self: start center;
+    }
+
+    input.button {
+        width: 100px;
+        justify-self: end center;
+    }
+}

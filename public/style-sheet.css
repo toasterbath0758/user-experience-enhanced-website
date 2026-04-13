@@ -1,0 +1,60 @@
+:root {
+  --background-color-1: #B3D686;
+  --background-color-2: #F8F39B;
+  --background-color-3: #D4C8E2;
+  --background-color-4: #02ADE6;
+  --background-color-5: #FDFDFD;
+  --background-color-6: #353434;
+  --background-color-7: #ECECEC;
+
+  --text-color-1: #fff;
+  --text-color-2: #000;
+  
+  --font-size-xl: 2.5rem;
+  --font-size-l:  2rem;    
+  --font-size-m:  1.5rem;
+  --font-size-sm: 1.3rem;
+  --font-size-s:  1.25rem;
+  --font-size-xs:  1.12rem;
+  --font-size-xxs: 1rem;
+
+  --border-radius-1: 1em;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+}
+
+h1 {
+  font-size: var(--font-size-xl);
+}
+
+h2 {
+  font-size: var(--font-size-l);
+}
+
+h3 {
+  font-size: var(--font-size-m);
+}
+
+h4 {
+  font-size: var(--font-size-sm);
+}
+
+.largeText {
+  font-size: var(--font-size-s);
+}
+
+a, .normalText {
+  font-size: var(--font-size-xs);
+}
+
+.smallText {
+  font-size: var(--font-size-xxs);
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-color-2);
+}

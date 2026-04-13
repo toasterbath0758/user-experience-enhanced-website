@@ -1,0 +1,42 @@
+{% render 'partials/head.liquid' %}
+
+<header class="mobileHeader">
+<h1>Nieuws</h1>
+    <ul class="filterHeader">
+    <li><a class="filterButton" href="/laatste">laatste</a></li>
+    <li><a class="filterButton" href="/inbloei">in de bloei</a></li>
+    <li><a class="filterButton" href="/nabloei">na de bloei</a></li>
+  </ul>
+</header>
+
+<main>
+
+<section class="articleList">
+  
+    {% for news in news %}
+      
+      <article class="articlePreview-nieuws">
+       <a href="/artikel/{{ news.slug }}">
+
+        <img src="https://fdnd-agency.directus.app/assets/{{ news.image }}" height="50" width="75" alt="plant">
+        <h4>{{ news.title | truncate: 25 }}</h4>
+      </article>
+      </a>
+      
+    {% endfor %}
+
+</section>
+  
+</main>
+<section class="nav">
+  <ul class="nav">
+    <li class="nav"><a href="/">home</li>
+    <li class="nav"><a href="/veldverkenner">veldverkenner</a></li>
+    <li class="nav"><a href="/nieuws">nieuws</a></li>
+    <li class="nav"><a href="/collectie">collectie</a></li>
+  </ul>
+</section>
+
+
+
+{% render 'partials/foot.liquid' %}

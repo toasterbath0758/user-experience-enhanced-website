@@ -1,0 +1,23 @@
+{% render 'partials/head.liquid' %}
+
+<header class="mobileHeader">
+  <h1>Jouw suggestie</h1>
+</header>
+
+<main>
+
+<a href="/suggesties" class="terug knop"></a>
+
+<form action="/jouw-suggestie" method="POST" class="form">
+    <label for="plant">Welke plant zou jij willen zien in de tuin?</label>
+    <input id="plant" name="suggestion" type="text" placeholder="plant...">
+
+    <label for="reden">Waarom zou je dit willen zien?</label>
+    <input id="reden" name="suggestion_reason" type="text" placeholder="waarom?...">
+  
+    <input class="button" type="submit" value="verstuur">
+</form>
+  
+</main>
+
+{% render 'partials/foot.liquid' %}

@@ -1,0 +1,4 @@
+// queryselector
+// addEventListener
+// verander iets
+

@@ -1,0 +1,21 @@
+{% render 'partials/head.liquid' %}
+
+<header class="mobileHeader">
+  <h1>nieuws</h1>
+</header>
+
+<main>
+    <a href="/nieuws" class="terug knop"></a>
+
+    <article class="artikel">
+    <h1>
+        {{ news.title }}
+    </h1>
+    <img src="https://fdnd-agency.directus.app/assets/{{ news.image }}" width="" alt="foto van de desbetreffende plant">
+    <p>
+        {{ news.body }}
+    </p>
+    </article>
+</main>
+
+{% render 'partials/foot.liquid' %}
