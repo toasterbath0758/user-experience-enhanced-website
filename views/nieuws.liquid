@@ -16,12 +16,11 @@
     {% for news in news %}
       
       <article class="articlePreview-nieuws">
-       <a href="/artikel/{{ news.slug }}">
-
-        <img src="https://fdnd-agency.directus.app/assets/{{ news.image }}" height="50" width="75" alt="plant">
-        <h4>{{ news.title | truncate: 25 }}</h4>
+        <a href="/artikel/{{ news.slug }}">
+          <img src="https://fdnd-agency.directus.app/assets/{{ news.image }}" height="50" width="75" alt="plant">
+          <h4>{{ news.title | truncate: 25 }}</h4>
+        </a>
       </article>
-      </a>
       
     {% endfor %}
 
