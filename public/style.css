@@ -89,7 +89,7 @@ section {
 /* statische knop op zelfde plek altijd. nog stijlen */
 .knop {
     position: absolute;
-    
+
     img {
         height: 3em;
         width: 3em;
@@ -111,6 +111,7 @@ section {
     right: 1em;
     bottom: 1em;
 }
+
 /* ///////// */
 
 
@@ -123,28 +124,32 @@ section.nav {
     height: 100px;
     background: var(--background-color-2);
 
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1em;
+
+    li {
+        font-size: var(--font-size-s);
+        font-weight: 600;
+
+    a {
+            display: grid;
+            justify-items: center;
+        }
+    }
+}
+
     @media (min-width: 800px) {
         /* top: 0; */
     }
 }
 
-ul.nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1em;
-}
 
 
-li.nav {
-    font-size: var(--font-size-s);
-    font-weight: 600;
 
-    a {
-    display: grid; 
-    justify-items: center;   
-    }
-}
+
 
 /* einde headernav */
 
@@ -243,7 +248,7 @@ article.artikel {
         font-size: var(--font-size-l);
         padding-bottom: 0.5em;
     }
- 
+
     p {
         font-size: var(--font-size-s);
     }
