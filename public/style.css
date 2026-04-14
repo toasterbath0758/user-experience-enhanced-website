@@ -108,8 +108,14 @@ section {
 }
 
 .toevoegen {
+    position: fixed;
     right: 1em;
-    bottom: 1em;
+    bottom: 6em;
+
+    img {
+        height: 5em;
+        width: 5em;
+    }
 }
 
 /* ///////// */
