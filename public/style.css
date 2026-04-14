@@ -213,6 +213,7 @@ article.articlePreview-nieuws {
     border-top: solid;
     border-radius: 0;
     padding: 1em;
+    gap: 1em;
 
     h4 {
         padding-bottom: 0;
@@ -223,11 +224,6 @@ article.articlePreview-nieuws {
         object-fit: cover;
         height: 50px;
         place-self: center;
-    }
-
-    a {
-        display: flex;
-        gap: 1em;
     }
 }
 
