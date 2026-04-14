@@ -12,7 +12,7 @@ main {
     padding-left: 1em;
 }
 
-/* darkmode */@media screen and (prefers-color-scheme: dark){ 
+/* @media screen and (prefers-color-scheme: dark){ 
     body { 
         background-color: black; 
         color: white;
@@ -38,8 +38,8 @@ main {
         }
     }
  }
+ */
 
-/* eind darkmode */
 
 
 li {
@@ -88,10 +88,12 @@ section {
 /* KNOPCLASSES */
 /* statische knop op zelfde plek altijd. nog stijlen */
 .knop {
-    height: 3em;
-    width: 3em;
-    background: green;
     position: absolute;
+    
+    img {
+        height: 3em;
+        width: 3em;
+    }
 }
 
 /* knop naar de suggestions page */
@@ -137,6 +139,11 @@ ul.nav {
 li.nav {
     font-size: var(--font-size-s);
     font-weight: 600;
+
+    a {
+    display: grid; 
+    justify-items: center;   
+    }
 }
 
 /* einde headernav */
@@ -206,7 +213,6 @@ article.articlePreview-nieuws {
     border-top: solid;
     border-radius: 0;
     padding: 1em;
-    gap: 1em;
 
     h4 {
         padding-bottom: 0;
@@ -217,6 +223,11 @@ article.articlePreview-nieuws {
         object-fit: cover;
         height: 50px;
         place-self: center;
+    }
+
+    a {
+        display: flex;
+        gap: 1em;
     }
 }
 
