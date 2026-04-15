@@ -4,52 +4,40 @@
   <h1>home</h1>
 </header>
 
-
-
 <main>
-
   <a href="/suggesties" class="suggesties knop"><img src="assets/imgs/lightbulb.svg" alt=""></a>
-
 
   <h2>Welkom Gebruiker</h2>
   <section>
-  <h3>Bloemenveld collectie</h3>
+    <h3>Bloemenveld collectie</h3>
 
-  <section class="collectionInfoHome">
-    <article>
-      <p>
-        je hebt nog niks gespaard start de veldverkenner om meer te weten te komen over wat er groeit en je collectie
-        aan te vullen
-      </p>
-    </article>
+    <ul class="collectionInfoHome">
+      <li>
+        <p>
+          je hebt nog niks gespaard start de veldverkenner om meer te weten te komen over wat er groeit en je collectie
+          aan te vullen
+        </p>
+      </li>
+    </ul>
   </section>
+
+  <section>
+    <h3>Veld Nieuws</h3>
+
+    <ul class="collectionArticles-home">
+      {% for news in news limit: 3 %}
+        <li>
+          <span class="tag">Bloemenveld</span>
+          <h4>
+            {{ news.title | truncate: 27 }}
+          </h4>
+          <img src="https://fdnd-agency.directus.app/assets/{{ news.image }}" alt="placeholder plant">
+          <p>{{ news.body | truncate: 30 }}</p>
+        </li>
+      {% endfor %}
+    </ul>
   </section>
-
-<section>
-  <h3>Veld Nieuws</h3>
-<section class="collectionArticles-home">
-<section class="articlePreview-home">
-{% for news in news limit:3 %}
-
-    <article class="articlePreview-home">
-    <span class="tag">Bloemenveld</span>
-    <h4>
-        {{ news.title | truncate: 27}}
-    </h4>
-      <img src="https://fdnd-agency.directus.app/assets/{{ news.image }}" alt="placeholder plant">
-      <p>{{ news.body | truncate: 30}}</p>
-    </article>
-  
-{% endfor %}
-</section>
-</section>
-</section>
-
 
 </main>
-
-
-
-
 
 {% render 'partials/foot.liquid' %}

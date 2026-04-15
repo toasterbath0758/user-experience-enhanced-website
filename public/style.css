@@ -136,16 +136,16 @@ section.nav {
         justify-content: center;
         gap: 1em;
 
-    li {
-        font-size: var(--font-size-s);
-        font-weight: 600;
+        li {
+            font-size: var(--font-size-s);
+            font-weight: 600;
 
-    a {
-            display: grid;
-            justify-items: center;
+            a {
+                display: grid;
+                justify-items: center;
+            }
         }
     }
-}
 
     @media (min-width: 800px) {
         /* top: 0; */
@@ -160,7 +160,8 @@ section.nav {
 /* einde headernav */
 
 /* bloemenveld collectie gedeelte */
-section.collectionInfoHome {
+
+.collectionInfoHome {
     background: var(--background-color-4);
     margin: 1em;
     padding: 1em;
@@ -178,47 +179,50 @@ section.collectionInfoHome {
     border-radius: 20px;
 }
 
-
 /* basis stijling van de article previews */
 .articleList {
     display: flex;
     flex-direction: column;
 }
 
+/* de ul class van de artikelen op de homepage */
 .collectionArticles-home {
     padding: 1em 0 1em 1em;
-}
-
-/* nesting is widely available */
-article.articlePreview-home {
-    background: var(--background-color-2);
-    color: var(--text-color-2);
-    padding: 1em;
-    border-radius: 1em;
-    width: 250px;
-
-    h4 {
-        padding-bottom: 1em;
-        font-size: var(--font-size-s);
-        text-wrap: nowrap;
-    }
-
-    img {
-        width: 250px;
-        height: 180px;
-        object-fit: cover;
-    }
-}
-
-/* preview van artikel op de homepagina */
-section.articlePreview-home {
+    display: flex;
     display: flex;
     gap: 1em;
     overflow-x: scroll;
+
+/* de li styling van de artikelen op de homepage */
+    li {
+        background: var(--background-color-2);
+        color: var(--text-color-2);
+        padding: 1em;
+        border-radius: 1em;
+        width: 250px;
+
+        h4 {
+            padding-bottom: 1em;
+            font-size: var(--font-size-s);
+            text-wrap: nowrap;
+        }
+
+        img {
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+        }
+    }
 }
 
+/* de li class van de artikelen op de homepage */
+
+
+/* preview van artikel op de homepagina */
+section.articlePreview-home {}
+
 /* preview van artikel op de nieuwspagina */
-article.articlePreview-nieuws {
+.articlePreview-nieuws {
     display: flex;
     background: transparent;
     border-top: solid;
@@ -241,7 +245,7 @@ article.articlePreview-nieuws {
 
 
 /* detailpagina nieuwsbericht */
-article.artikel {
+.artikel {
     border-radius: var(--border-radius-1);
     padding: 1em;
 
