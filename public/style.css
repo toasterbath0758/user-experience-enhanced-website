@@ -5,7 +5,7 @@
 
 main {
     margin-top: 1em;
-    margin-bottom: 7em;
+    margin-bottom: 100px;
     height: fit-content;
 
     padding-right: 1em;
@@ -56,12 +56,6 @@ header {
 
 .mobileHeader {
     place-content: start space-evenly;
-}
-
-section {
-    p {
-        width: 30ch;
-    }
 }
 
 /* de filter in de header */
@@ -121,8 +115,8 @@ section {
 /* ///////// */
 
 
-/* footer met nav */
-section.nav {
+/* footer met mobileNav */
+.nav {
     position: fixed;
     bottom: 0;
     place-content: center;
@@ -136,9 +130,9 @@ section.nav {
         justify-content: center;
         gap: 1em;
 
-        li {
-            font-size: var(--font-size-s);
-            font-weight: 600;
+            img {
+                width: 2em;
+            }
 
             a {
                 display: grid;
@@ -148,20 +142,10 @@ section.nav {
         }
     }
 
-    @media (min-width: 800px) {
-        /* top: 0; */
-    }
-}
+/* einde mobileNav */
 
-
-
-
-
-
-/* einde headernav */
 
 /* bloemenveld collectie gedeelte */
-
 .collectionInfoHome {
     background: var(--background-color-4);
     margin: 1em;
