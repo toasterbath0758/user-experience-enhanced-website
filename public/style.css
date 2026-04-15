@@ -258,11 +258,6 @@ section.nav {
     }
 }
 
-.error-img {
-    width: 80vw;
-    justify-self: center;
-}
-
 
 /* ul styling van de suggesties op de suggesties pagina */
 .collectionSuggesties {
@@ -315,4 +310,10 @@ form.form {
         justify-self: end center;
         border: none;
     }
+}
+
+/* de image voor de 404 page */
+.error-img {
+    width: 80vw;
+    justify-self: center;
 }
