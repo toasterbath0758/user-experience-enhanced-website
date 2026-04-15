@@ -179,12 +179,6 @@ section.nav {
     border-radius: 20px;
 }
 
-/* basis stijling van de article previews */
-.articleList {
-    display: flex;
-    flex-direction: column;
-}
-
 /* de ul class van de artikelen op de homepage */
 .collectionArticles-home {
     padding: 1em 0 1em 1em;
@@ -193,7 +187,7 @@ section.nav {
     gap: 1em;
     overflow-x: scroll;
 
-/* de li styling van de artikelen op de homepage */
+    /* de li styling van de artikelen op de homepage */
     li {
         background: var(--background-color-2);
         color: var(--text-color-2);
@@ -215,33 +209,32 @@ section.nav {
     }
 }
 
-/* de li class van de artikelen op de homepage */
-
-
-/* preview van artikel op de homepagina */
-section.articlePreview-home {}
-
-/* preview van artikel op de nieuwspagina */
-.articlePreview-nieuws {
+/* de ul class van de artikelen op de nieuwspage */
+.collectionArticles-nieuws {
     display: flex;
-    background: transparent;
-    border-top: solid;
-    border-radius: 0;
-    padding: 1em;
-    gap: 1em;
+    flex-direction: column;
 
-    h4 {
-        padding-bottom: 0;
-        font-size: var(--font-size-s);
-    }
+/* de li styling van de artikelen op de nieuwspage */
+    li {
+        display: flex;
+        background: transparent;
+        border-top: solid;
+        border-radius: 0;
+        padding: 1em;
+        gap: 1em;
 
-    img {
-        object-fit: cover;
-        height: 50px;
-        place-self: center;
+        h4 {
+            padding-bottom: 0;
+            font-size: var(--font-size-s);
+        }
+
+        img {
+            object-fit: cover;
+            height: 50px;
+            place-self: center;
+        }
     }
 }
-
 
 
 /* detailpagina nieuwsbericht */

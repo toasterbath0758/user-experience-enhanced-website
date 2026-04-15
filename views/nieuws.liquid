@@ -11,15 +11,15 @@
 
 <main>
 
-<section class="articleList">
+<ul class="collectionArticles-nieuws">
   
     {% for news in news %}
       
       <a href="/artikel/{{ news.slug }}">
-        <article class="articlePreview-nieuws">
+        <li>
           <img src="https://fdnd-agency.directus.app/assets/{{ news.image }}" height="50" width="75" alt="plant">
           <h4>{{ news.title | truncate: 25 }}</h4>
-        </article>
+        </li>
       </a>
       
     {% endfor %}
