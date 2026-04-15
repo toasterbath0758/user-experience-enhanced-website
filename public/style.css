@@ -143,6 +143,7 @@ section.nav {
             a {
                 display: grid;
                 justify-items: center;
+                font-size: var(--font-size-xxs);
             }
         }
     }
@@ -263,19 +264,28 @@ section.nav {
 }
 
 
-.suggestie {
-    display: flex;
+/* ul styling van de suggesties op de suggesties pagina */
+.collectionSuggesties {
     flex-direction: row;
+    margin-bottom: 13em;
 
+/* li styling van de suggesties op de suggesties pagina */
+    li {
+        display: flex;
+        padding: 1em;
+        border-radius: 1em;
+        margin-bottom: 1em;
+        background: var(--background-color-2);
+        justify-content: space-between;
+    }
 
-    padding: 1em;
-    border-radius: 1em;
-    margin: 1em;
-
-    background: var(--background-color-2);
-
-    .votes {
-        width: 1em;
+    /* de votes section */
+    section {
+        display: flex;
+    }
+    /* vote emoji's */
+    p {
+        width: fit-content;
     }
 }
 
@@ -290,7 +300,7 @@ form.form {
     input {
         width: 250px;
         padding: 0.5em;
-        border: solid black;
+        border: solid 0.1em lightslategray;
         border-radius: 5em;
         border-style: default;
         align-self: center;
@@ -303,5 +313,6 @@ form.form {
     input.button {
         width: 100px;
         justify-self: end center;
+        border: none;
     }
 }

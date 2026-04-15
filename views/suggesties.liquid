@@ -5,43 +5,36 @@
 </header>
 
 <main>
-<a href="/" class="terug knop"></a>
-{% comment %} <a href="/" class="terug knop"></a>
+  <a href="/" class="terug knop"></a>
+  {% comment %}
+    <a href="/" class="terug knop"></a>
 
-<section class="suggestie">
-<h3>
-    suggestie 1
-</h3>
+    <section class="suggestie">
+    <h3>
+        suggestie 1
+    </h3>
 
-<article class="votes">
-<p>⬇️</p>
+    <article class="votes">
+    <p>⬇️</p>
 
-<p>⬆️</p>
-</article> {% endcomment %}
+    <p>⬆️</p>
+    </article>
+  {% endcomment %}
 
-
+  <ul class="collectionSuggesties">
     {% for suggestion in suggestions %}
-      
-      <article class="suggestie">
+      <li>
         {% comment %} de eerste sugg is alle data uit de database, de tweede sugg is de variabele uit de database in het id {% endcomment %}
         <h4>{{ suggestion.suggestion }}</h4>
-
-<article class="votes">
-<p>⬇️</p>
-
-<p>⬆️</p>
-</article>
-
-      </article>
-      
+        <section>
+          <p>⬇️</p>
+          <p>⬆️</p>
+        </section>
+      </li>
     {% endfor %}
+  </ul>
 
-</section>
-
-
-<a href="/jouw-suggestie" class="toevoegen knop"><img src="../assets/imgs/add.svg" alt="toevoegen"></a>
-
+  <a href="/jouw-suggestie" class="toevoegen knop"><img src="../assets/imgs/add.svg" alt="toevoegen"></a>
 </main>
-
 
 {% render 'partials/foot.liquid' %}
