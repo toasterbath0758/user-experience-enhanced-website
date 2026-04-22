@@ -24,12 +24,16 @@
   <ul class="collectionSuggesties">
     {% for suggestion in suggestions %}
       <li class="loading-animation">
+        <p>{{ suggestion.id }}</p>
         {% comment %} de eerste sugg is alle data uit de database, de tweede sugg is de variabele uit de database in het id {% endcomment %}
         <h4>{{ suggestion.suggestion }}</h4>
         <section>
           <p>⬇️</p>
           <p>⬆️</p>
         </section>
+        <form method="POST" action="/suggesties/delete/{{ suggestion.id }}">
+          <button type="submit">delete</button>
+          </form>
       </li>
     {% endfor %}
   </ul>

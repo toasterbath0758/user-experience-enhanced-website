@@ -110,7 +110,7 @@ app.get('/jouw-suggestie', async function (request, response) {
 })
 
 /////////////////////////////////////////////////
-// POST GEDEELTE
+// POST + DELETE GEDEELTE
 
 app.post('/jouw-suggestie', async (request, response) => {
 
@@ -139,8 +139,25 @@ app.post('/jouw-suggestie', async (request, response) => {
   response.redirect(303, '/suggesties')
 })
 
+app.post('/suggesties/delete/:id', async (request, response) => {
 
-// EINDE POST GEDEELTE
+   const idsuggestion = request.params.id 
+   console.log(`https://fdnd-agency.directus.app/items/frankendael_suggestions/${idsuggestion}`)
+  // Stuur een POST request naar de messages tabel
+  // Een POST request bevat ook extra parameters, naast een URL
+  await fetch(`https://fdnd-agency.directus.app/items/frankendael_suggestions/${idsuggestion}`, {
+   
+    // Overschrijf de standaard GET method, want ook hier gaan we iets veranderen op de server
+    method: 'DELETE'        
+   
+    // En vergeet deze HTTP headers niet: hiermee vertellen we de server dat we JSON doorsturen
+    // (In realistischere projecten zou je hier ook authentication headers of een sleutel meegeven)
+  });
+
+  // Stuur de browser daarna weer naar de homepage
+  response.redirect(303, '/suggesties')
+})
+// EINDE POST + DELETE GEDEELTE
 ///////////////////////////////////////////////
 
 app.get('/veldverkenner', async function (request, response) {
