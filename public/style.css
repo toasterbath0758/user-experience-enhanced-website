@@ -124,11 +124,11 @@ header {
     height: 100px;
     background: var(--background-color-2);
 
-        ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            gap: 1em;
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1em;
 
         img {
             width: 2em;
@@ -165,23 +165,27 @@ header {
     gap: 1em;
     overflow-x: scroll;
 
+
+
     /* tag van de article preview */
-        .tag {
-            align-self: flex-start;
-            font-size: var(--font-size-xxs);
-            font-weight: bolder;
-            background: var(--background-color-5);
-            padding: 4px 10px;
-            border-radius: 20px;
-        }
+    .tag {
+        align-self: flex-start;
+        font-size: var(--font-size-xxs);
+        font-weight: bolder;
+        background: var(--background-color-5);
+        padding: 4px 10px;
+        border-radius: 20px;
+    }
 
     /* de li styling van de artikelen op de homepage */
-        li {
-            background: var(--background-color-2);
-            color: var(--text-color-2);
-            padding: 1em;
-            border-radius: 1em;
-            width: 250px;
+    li {
+        background: var(--background-color-2);
+        color: var(--text-color-2);
+        padding: 1em;
+        border-radius: 1em;
+        width: 250px;
+
+
 
         h4 {
             padding-bottom: 1em;
@@ -198,6 +202,23 @@ header {
     }
 }
 
+/* li class voor clean loading animatie */
+.loading-animation {
+animation: fade-in 0.5s backwards;
+animation-delay: calc(100ms * sibling-index());
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+/* /////////////////////////////// */
+
 /* de ul class van de artikelen op de nieuwspage */
 .collectionArticles-nieuws {
     display: flex;
@@ -212,16 +233,17 @@ header {
         padding: 1em;
         gap: 1em;
 
-    h4 {
-        padding-bottom: 0;
-        font-size: var(--font-size-s);
+        h4 {
+            padding-bottom: 0;
+            font-size: var(--font-size-s);
+        }
+
+        img {
+            object-fit: cover;
+            height: 50px;
+            place-self: center;
+        }
     }
-    img {
-        object-fit: cover;
-        height: 50px;
-        place-self: center;
-    }
-  }
 }
 
 

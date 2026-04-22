@@ -16,7 +16,7 @@
     {% for news in news %}
       
       <a href="/artikel/{{ news.slug }}">
-        <li>
+        <li class="loading-animation">
           <img src="https://fdnd-agency.directus.app/assets/{{ news.image }}" height="50" width="75" alt="{{ news.title }}">
           <h4>{{ news.title | truncate: 25 }}</h4>
         </li>

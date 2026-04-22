@@ -26,7 +26,7 @@
 
     <ul class="collectionArticles-home">
       {% for news in news limit: 3 %}
-        <li>
+        <li class="loading-animation">
           <span class="tag">Bloemenveld</span>
           <h4>
             {{ news.title | truncate: 27 }}
