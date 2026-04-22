@@ -124,23 +124,23 @@ header {
     height: 100px;
     background: var(--background-color-2);
 
-    ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 1em;
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 1em;
 
-            img {
-                width: 2em;
-            }
+        img {
+            width: 2em;
+        }
 
-            a {
-                display: grid;
-                justify-items: center;
-                font-size: var(--font-size-xxs);
-            }
+        a {
+            display: grid;
+            justify-items: center;
+            font-size: var(--font-size-xxs);
         }
     }
+}
 
 /* einde mobileNav */
 
@@ -155,14 +155,7 @@ header {
 
 /* ////////////////////// */
 
-/* tag van de article preview */
-.tag {
-    align-self: flex-start;
-    font-size: var(--font-size-xxs);
-    background: var(--background-color-5);
-    padding: 4px 10px;
-    border-radius: 20px;
-}
+
 
 /* de ul class van de artikelen op de homepage */
 .collectionArticles-home {
@@ -172,16 +165,27 @@ header {
     gap: 1em;
     overflow-x: scroll;
 
+    /* tag van de article preview */
+        .tag {
+            align-self: flex-start;
+            font-size: var(--font-size-xxs);
+            font-weight: bolder;
+            background: var(--background-color-5);
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
     /* de li styling van de artikelen op de homepage */
-    li {
-        background: var(--background-color-2);
-        color: var(--text-color-2);
-        padding: 1em;
-        border-radius: 1em;
-        width: 250px;
+        li {
+            background: var(--background-color-2);
+            color: var(--text-color-2);
+            padding: 1em;
+            border-radius: 1em;
+            width: 250px;
 
         h4 {
             padding-bottom: 1em;
+            padding-top: 0.5em;
             font-size: var(--font-size-s);
             text-wrap: nowrap;
         }
@@ -199,7 +203,7 @@ header {
     display: flex;
     flex-direction: column;
 
-/* de li styling van de artikelen op de nieuwspage */
+    /* de li styling van de artikelen op de nieuwspage */
     li {
         display: flex;
         background: transparent;
@@ -208,17 +212,16 @@ header {
         padding: 1em;
         gap: 1em;
 
-        h4 {
-            padding-bottom: 0;
-            font-size: var(--font-size-s);
-        }
-
-        img {
-            object-fit: cover;
-            height: 50px;
-            place-self: center;
-        }
+    h4 {
+        padding-bottom: 0;
+        font-size: var(--font-size-s);
     }
+    img {
+        object-fit: cover;
+        height: 50px;
+        place-self: center;
+    }
+  }
 }
 
 
@@ -248,7 +251,7 @@ header {
     flex-direction: row;
     margin-bottom: 13em;
 
-/* li styling van de suggesties op de suggesties pagina */
+    /* li styling van de suggesties op de suggesties pagina */
     li {
         display: flex;
         padding: 1em;
@@ -262,6 +265,7 @@ header {
     section {
         display: flex;
     }
+
     /* vote emoji's */
     p {
         width: fit-content;
