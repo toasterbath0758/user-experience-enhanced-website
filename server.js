@@ -130,7 +130,7 @@ app.post('/jouw-suggestie', async (request, response) => {
    headers: {
       'Content-Type': 'application/json',
    }
-
+   
     // En vergeet deze HTTP headers niet: hiermee vertellen we de server dat we JSON doorsturen
     // (In realistischere projecten zou je hier ook authentication headers of een sleutel meegeven)
   });
