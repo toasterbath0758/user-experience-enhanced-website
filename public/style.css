@@ -322,6 +322,12 @@ form.form {
     }
 }
 
+/* form success-state */
+.button.verstuur.active {
+    background: var(--background-color-1);
+    color: var(--text-color-1);
+}
+
 /* de image voor de 404 page */
 .error-img {
     width: 80vw;
