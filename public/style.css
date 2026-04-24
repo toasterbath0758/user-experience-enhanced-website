@@ -281,11 +281,13 @@ animation-delay: calc(100ms * sibling-index());
         margin-bottom: 1em;
         background: var(--background-color-2);
         justify-content: space-between;
+        
     }
 
     /* de votes section */
     section {
         display: flex;
+        gap: 1em;
     }
 
     /* vote emoji's */
