@@ -12,18 +12,6 @@ import express from 'express'
 // Importeer de Liquid package (ook als dependency via npm geïnstalleerd)
 import { Liquid } from 'liquidjs';
 
-
-console.log('wow')
-// Doe een fetch naar de data die je nodig hebt
-// const apiResponse = await fetch('...')
-// Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
-// const apiResponseJSON = await apiResponse.json()
-
-// Controleer eventueel de data in je console
-// (Let op: dit is _niet_ de console van je browser, maar van NodeJS, in je terminal)
-// console.log(apiResponseJSON)
-
-
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express()
 
@@ -67,8 +55,6 @@ app.get('/artikel', async function (request, response) {
 })
 //////////////////
 
-
-
 // load de nieuws
 app.get('/nieuws', async function (request, response) {
 
@@ -79,6 +65,7 @@ app.get('/nieuws', async function (request, response) {
    const artikelResponseJSON = await artikelResponse.json()
    response.render('nieuws.liquid', { news: artikelResponseJSON.data })  
 })
+
 //////////////////
 // maak een nieuws slug
 app.get('/artikel/:slug', async function (request, response) {
@@ -90,7 +77,6 @@ app.get('/artikel/:slug', async function (request, response) {
    const artikelResponseJSON = await artikelResponse.json()
    response.render('artikel.liquid', { news: artikelResponseJSON.data[0] })  
 })
-  
 /////////////////////////////////
 
 app.get('/suggesties', async function (request, response) {
@@ -139,19 +125,16 @@ app.post('/jouw-suggestie', async (request, response) => {
   response.redirect(303, '/suggesties')
 })
 
+
+// maak een delete route aan
 app.post('/suggesties/delete/:id', async (request, response) => {
 
    const idsuggestion = request.params.id 
-   console.log(`https://fdnd-agency.directus.app/items/frankendael_suggestions/${idsuggestion}`)
-  // Stuur een POST request naar de messages tabel
   // Een POST request bevat ook extra parameters, naast een URL
   await fetch(`https://fdnd-agency.directus.app/items/frankendael_suggestions/${idsuggestion}`, {
    
-    // Overschrijf de standaard GET method, want ook hier gaan we iets veranderen op de server
+    // Overschrijf de standaard GET method, want ook hier gaan we iets vdeleten van de server
     method: 'DELETE'        
-   
-    // En vergeet deze HTTP headers niet: hiermee vertellen we de server dat we JSON doorsturen
-    // (In realistischere projecten zou je hier ook authentication headers of een sleutel meegeven)
   });
 
   // Stuur de browser daarna weer naar de homepage
