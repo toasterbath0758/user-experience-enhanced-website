@@ -28,8 +28,7 @@ app.engine('liquid', engine.express());
 // Let op: de browser kan deze bestanden niet rechtstreeks laden (zoals voorheen met HTML bestanden)
 app.set('views', './views')
 
-
-// load de home
+// maak de route aan
 app.get('/', async function (request, response) {
 
    // haal de baseURL data op
