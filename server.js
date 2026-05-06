@@ -1,10 +1,5 @@
 console.log('Hier komt je server voor Sprint 10.')
 
-console.log('Gebruik uit Sprint 9 alleen de code die je mee wilt nemen.')
-
-console.log('Zet \'m op!')
-
-
 // Importeer het npm package Express (uit de door npm aangemaakte node_modules map)
 // Deze package is geïnstalleerd via `npm install`, en staat als 'dependency' in package.json
 import express from 'express'
