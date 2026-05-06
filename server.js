@@ -12,6 +12,9 @@ import express from 'express'
 // Importeer de Liquid package (ook als dependency via npm geïnstalleerd)
 import { Liquid } from 'liquidjs';
 
+// maak een baseURL aan
+const baseURL = 'https://fdnd-agency.directus.app/items/frankendael_news'
+
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express()
 
@@ -34,12 +37,14 @@ app.set('views', './views')
 // load de home
 app.get('/', async function (request, response) {
 
-// Haal alle nieuwsartikelen uit de directus API op
-   const artikelResponse = await fetch('https://fdnd-agency.directus.app/items/frankendael_news')
+   // haal de baseURL data op
+   const artikelResponse = await fetch(baseURL)
 
-   // En haal daarvan de JSON op
+   // haal de JSON daarvan op
    const artikelResponseJSON = await artikelResponse.json()
-   response.render('index.liquid', { news: artikelResponseJSON.data })  
+   response.render('index.liquid', { 
+     news: artikelResponseJSON.data 
+   })
 })
 
 
